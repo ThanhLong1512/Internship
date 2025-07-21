@@ -172,39 +172,59 @@ Cuối cùng, một giải pháp SMS thành công đòi hỏi phải cân bằng
 
 ### Tài liệu gốc
 
-- [Original Article](https://aws.amazon.com/vi/blogs/containers/amazon-eks-pod-identity-streamlines-cross-account-access/): Bài viết gốc
-- [Author's Profile](link): Thông tin tác giả
-- [Related Articles](link): Bài viết liên quan
+- [Original Article](https://aws.amazon.com/blogs/messaging-and-targeting/sms-onboarding-for-saas-isv-and-multi-tenant-applications-with-aws-end-user-messaging//): Bài viết gốc
+- [Author's Profile](link): [Tylera Holmes](https://www.linkedin.com/in/tyleraholmes)
+- [Related Articles](link): [Bài viết liên quan](https://aws.amazon.com/blogs/messaging-and-targeting/automating-sender-id-configuration-for-sms-with-aws-end-user-messaging-apis/)
 
 ### Tài liệu tiếng Việt
 
-- [AWS Documentation VN](link): Tài liệu AWS tiếng Việt
-- [AWS Learning Resources](link): Tài nguyên học tập AWS
-- [Community Discussions](link): Thảo luận cộng đồng
+- [AWS Documentation VN](link): [Tài liệu AWS tiếng Việt](https://aws.amazon.com/vi/)
+- [AWS Learning Resources](link):(https://cloudjourney.awsstudygroup.com/) Tài nguyên học tập AWS
+- [Community Discussions](link):(https://www.facebook.com/groups/660548818043427) Thảo luận cộng đồng
 
 ### Tools và Services
 
-- [AWS Service 1](link): Mô tả service
-- [AWS Service 2](link): Mô tả service
-- [Third-party Tools](link): Tools bổ sung
+- AWS End User Messaging: Dịch vụ chính để gửi SMS, email và push notifications với khả năng scale cao
+- AWS End User Messaging API: API để tích hợp SMS capabilities vào applications
+- AWS Account Management: Quản lý tài khoản AWS cho multi-tenant architectures
 
 ---
 
 ## 💬 Ghi chú của người dịch
 
-[Ghi chú về quá trình dịch, challenges gặp phải, insights gained]
+Blog này đặc biệt challenging vì kết hợp technical complexity với regulatory requirements. Quá trình dịch đòi hỏi hiểu sâu về cả technical implementation và legal compliance trong SMS messaging.
 
 ### Challenges trong quá trình dịch
 
-- **Technical Terms**: [Thuật ngữ khó dịch và cách giải quyết]
-- **Cultural Context**: [Context cần adapt cho VN]
-- **Complex Concepts**: [Khái niệm phức tạp và cách giải thích]
+- **Technical Terms**:
+  "Provider/Customer/End User": Giữ nguyên tiếng Anh vì đây là terminology chuẩn trong industry, dịch sang tiếng Việt sẽ gây nhầm lẫn
+  "Originator": Dịch thành "Nguồn gửi tin nhắn" nhưng vẫn giữ term gốc trong ngoặc vì không có từ tiếng Việt tương đương chính xác
+  "10DLC": Giữ nguyên vì là tên riêng của hệ thống, giải thích thành "10 Digit Long Code" trong glossary
+  "Opt-in/Opt-out": Dịch thành "Đồng ý tham gia/Từ chối" nhưng technical docs vẫn nên giữ nguyên English terms
+- **Cultural Context**:
+  Privacy regulations: Blog focus vào US regulations (10DLC, carrier requirements) nhưng cần lưu ý Vietnam có PDPA và các quy định riêng
+  SMS usage patterns: Tại VN, Zalo/WhatsApp phổ biến hơn SMS, cần adapt examples cho phù hợp
+  Business models: SaaS/ISV concepts cần giải thích rõ hơn vì chưa phổ biến tại thị trường VN
+- **Complex Concepts**:
+  Multi-tenant architecture: Khái niệm phức tạp, cần examples cụ thể để VN developers hiểu
+  Registration ownership: Legal concept về việc ai chịu trách nhiệm đăng ký, cần mapping với luật VN
+  Carrier relationships: Ecosystem nhà mạng VN khác với US, cần research thêm về Viettel, VNPT, Mobifone requirements
 
 ### Insights gained
 
-- **Technical Learning**: [Kiến thức kỹ thuật học được]
-- **Language Skills**: [Kỹ năng ngôn ngữ phát triển]
-- **Industry Knowledge**: [Hiểu biết ngành nghề]
+- **Technical Learning**:
+  SMS ecosystem complexity: Hiểu sâu hơn về regulatory landscape và technical challenges trong SMS messaging
+  AWS End User Messaging: Nắm được capabilities và limitations của service, cách integrate vào multi-tenant application
+  Architecture patterns: 6 models khác nhau cho SMS implementation, mỗi model có trade-offs riêng về complexity vs control
+  Compliance requirements: Tầm quan trọng của opt-in processes, privacy policies và content restrictions
+- **Language Skills**:
+  Technical writing: Cách structure complex technical content một cách logical và dễ hiểu
+  Terminology management: Skill maintain consistency trong việc sử dụng technical terms across documents
+  Audience adaptation: Cách adjust tone và depth dựa trên technical level của readers
+- **Industry Knowledge**:
+  Telecommunications landscape: Hiểu về carrier requirements, originator types và international differences
+  SaaS business models: Pricing strategies, customer segmentation và service differentiation trong SMS space
+  Regulatory compliance: Intersection giữa technology và legal requirements trong messaging services
 
 ---
 
